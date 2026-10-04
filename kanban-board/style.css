@@ -1,0 +1,369 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #f5f3ff;
+
+  background:
+    radial-gradient(circle at 15% 10%, #312e81 0%, transparent 28%),
+    radial-gradient(circle at 85% 20%, #581c87 0%, transparent 25%),
+    radial-gradient(circle at 50% 100%, #1e1b4b 0%, transparent 35%), #090916;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+  padding: 18px 55px;
+
+  background: rgba(10, 10, 25, 0.75);
+  border-bottom: 1px solid rgba(167, 139, 250, 0.2);
+
+  backdrop-filter: blur(18px);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 14px;
+  object-fit: cover;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.45);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+
+  list-style: none;
+}
+
+nav li {
+  color: #c4b5fd;
+  font-size: 14px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+nav li:hover {
+  color: #ffffff;
+}
+
+/* =========================================
+   MAIN
+========================================= */
+
+main {
+  max-width: 1500px;
+  margin: auto;
+
+  padding: 55px 45px;
+}
+
+.main-heading {
+  margin-bottom: 45px;
+
+  text-align: center;
+
+  font-size: 42px;
+  font-weight: 800;
+
+  letter-spacing: 4px;
+
+  background: linear-gradient(90deg, #c4b5fd, #ffffff, #a78bfa);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 35px rgba(139, 92, 246, 0.25);
+}
+
+/* =========================================
+   KANBAN BOARD
+========================================= */
+
+.container {
+  display: flex;
+  gap: 25px;
+  align-items: stretch;
+}
+
+/* =========================================
+   COLUMNS
+========================================= */
+
+.column {
+  flex: 1;
+
+  min-height: 550px;
+
+  padding: 22px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.055);
+
+  border: 1px solid rgba(167, 139, 250, 0.18);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  transition: 0.3s ease;
+}
+
+.column:hover {
+  border-color: rgba(167, 139, 250, 0.35);
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(124, 58, 237, 0.08);
+}
+
+/* =========================================
+   COLUMN HEADINGS
+========================================= */
+
+.column h2 {
+  margin-bottom: 22px;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid rgba(167, 139, 250, 0.15);
+
+  color: #ddd6fe;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+/* =========================================
+   CARDS AREA
+========================================= */
+
+.cards-area {
+  min-height: 390px;
+}
+
+/* =========================================
+   TASK CARD
+========================================= */
+
+.cards-area > div {
+  position: relative;
+
+  padding: 18px;
+
+  margin-bottom: 15px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.035)
+  );
+
+  border: 1px solid rgba(196, 181, 253, 0.15);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  cursor: grab;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.cards-area > div:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(167, 139, 250, 0.4);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.35),
+    0 0 20px rgba(124, 58, 237, 0.12);
+}
+
+.cards-area > div:active {
+  cursor: grabbing;
+  transform: scale(0.98);
+}
+
+/* =========================================
+   TASK TEXT
+========================================= */
+
+.cards-area p {
+  margin-bottom: 16px;
+
+  color: #f5f3ff;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  word-break: break-word;
+}
+
+/* =========================================
+   CARD BUTTONS
+========================================= */
+
+.cards-area button {
+  padding: 8px 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+/* DELETE */
+
+.cards-area button:first-of-type {
+  background: rgba(239, 68, 68, 0.12);
+  color: #fca5a5;
+
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.cards-area button:first-of-type:hover {
+  background: #ef4444;
+  color: white;
+
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
+}
+
+/* COPY */
+
+.cards-area button:last-of-type {
+  background: rgba(139, 92, 246, 0.14);
+  color: #c4b5fd;
+
+  border-color: rgba(139, 92, 246, 0.25);
+}
+
+.cards-area button:last-of-type:hover {
+  background: #7c3aed;
+  color: white;
+
+  box-shadow: 0 0 18px rgba(124, 58, 237, 0.4);
+}
+
+/* =========================================
+   ADD TASK BUTTON
+========================================= */
+
+.add {
+  width: 100%;
+
+  padding: 13px;
+
+  border: 1px dashed rgba(167, 139, 250, 0.35);
+
+  border-radius: 10px;
+
+  background: rgba(124, 58, 237, 0.07);
+
+  color: #c4b5fd;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.add:hover {
+  background: rgba(124, 58, 237, 0.18);
+
+  border-color: #a78bfa;
+
+  color: white;
+
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.2);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  header {
+    padding: 18px 25px;
+  }
+
+  main {
+    padding: 40px 20px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .column {
+    min-height: 400px;
+  }
+
+  .main-heading {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  nav ul {
+    gap: 15px;
+  }
+
+  nav li {
+    font-size: 11px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+}

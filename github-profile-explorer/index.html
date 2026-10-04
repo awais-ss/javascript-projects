@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GH PROFILE EXPLORER</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <span class="brand">&gt; GH-explorer</span>
+        <nav>
+          <span class="nav-item">home</span>
+          <span class="nav-item">about</span>
+          <span class="nav-item">contact</span>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="prompt-line">
+        <span class="prompt-symbol">$ lookup --user</span>
+      </div>
+
+      <div class="search-bar">
+        <input
+          type="text"
+          id="usernameInput"
+          placeholder="octocat"
+          autocomplete="on"
+        />
+        <button id="searchBtn">run</button>
+      </div>
+      <div class="result-container">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8hHQn_HnD_UepqBpWLhBy8Y1ljsUJMz_l2i6AU9Hg8LyOBnL52LjZmpmV&s=10"
+          alt="AVATAR"
+          class="avatar"
+        />
+        <span class="username"></span>
+        <span class="bio"></span>
+        <span class="followers"></span>
+        <span class="following"></span>
+        <span class="publicReposCount"></span>
+        <span class="topRepos"></span>
+      </div>
+    </main>
+
+    <footer>
+      <p>gh-explorer &copy; 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KANBAN's BOARD</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtXuD5fDXrKqfJfTARqhBfkyw1PLpK-yYzt7LVQq7fOQ&s=10"
+          alt="RAGA"
+          class="logo"
+        />
+        <ul>
+          <li>HOME</li>
+          <li>ABOUT</li>
+          <li>CONTACT</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="main-heading">KANBAN's BOARD</h1>
+      <div class="container">
+        <div class="column" id="todo" data-status="todo">
+          <h2>TODO LIST</h2>
+          <div class="cards-area" id="todo-cards"></div>
+          <button class="add" data-target="todo">+ ADD TASK</button>
+        </div>
+
+        <div class="column" id="progress" data-status="progress">
+          <h2>IN PROGRESS</h2>
+          <div class="cards-area" id="progress-cards"></div>
+          <button class="add" data-target="progress">+ ADD TASK</button>
+        </div>
+
+        <div class="column" id="done" data-status="done">
+          <h2>DONE</h2>
+          <div class="cards-area" id="done-cards"></div>
+          <button class="add" data-target="done">+ ADD TASK</button>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

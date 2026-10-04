@@ -1,0 +1,376 @@
+/* ==============================
+   RESET
+============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+
+  background: #f4f0e6;
+  color: #252525;
+
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* ==============================
+   HEADER
+============================== */
+
+header {
+  background: #172535;
+  border-bottom: 4px solid #b08d57;
+}
+
+nav {
+  width: 90%;
+  max-width: 1150px;
+  min-height: 78px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 96px;
+  height: 48px;
+
+  object-fit: cover;
+
+  border: 2px solid #d4b77c;
+  border-radius: 40px;
+}
+
+nav ul {
+  display: flex;
+  gap: 38px;
+
+  list-style: none;
+}
+
+nav li {
+  color: #eee8da;
+
+  font-size: 14px;
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+nav li:hover {
+  color: #d4b77c;
+}
+
+/* ==============================
+   MAIN
+============================== */
+
+main {
+  width: 90%;
+  max-width: 1050px;
+
+  margin: 65px auto;
+  text-align: center;
+}
+
+/* ==============================
+   TITLE
+============================== */
+
+.mainHeading {
+  color: #172535;
+
+  font-size: 48px;
+  font-weight: 600;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 8px;
+}
+
+main > h2 {
+  color: #7b2737;
+
+  font-size: 17px;
+  font-weight: normal;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 42px;
+}
+
+/* ==============================
+   INFORMATION PANEL
+============================== */
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  background: #fffdf7;
+
+  border: 1px solid #c8bfae;
+  border-top: 4px solid #172535;
+
+  margin-bottom: 32px;
+}
+
+.info > * {
+  min-height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  border-right: 1px solid #d8d0c2;
+}
+
+.info > *:last-child {
+  border-right: none;
+}
+
+/* Timer */
+
+.timer {
+  color: #7b2737;
+
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/* Stats */
+
+.result,
+.accuracy,
+.correct,
+.wrong,
+.best {
+  color: #172535;
+
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* Best */
+
+.best {
+  color: #8a6a32;
+  font-weight: bold;
+}
+
+/* ==============================
+   TYPING AREA
+============================== */
+
+.main {
+  background: #fffdf7;
+
+  border: 1px solid #c8bfae;
+
+  padding: 38px 42px;
+
+  text-align: left;
+
+  box-shadow: 0 4px 12px rgba(40, 35, 25, 0.06);
+}
+
+.lines {
+  min-height: 110px;
+
+  color: #303b42;
+
+  font-size: 21px;
+  font-weight: normal;
+
+  line-height: 1.9;
+
+  letter-spacing: 0.3px;
+
+  margin-bottom: 28px;
+}
+
+/* ==============================
+   INPUT
+============================== */
+
+.input {
+  width: 100%;
+
+  padding: 16px 18px;
+
+  background: #f4f0e6;
+
+  color: #252525;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+
+  border: 1px solid #aaa08f;
+
+  outline: none;
+
+  transition: 0.25s;
+}
+
+.input:focus {
+  background: #fffdf7;
+
+  border-color: #172535;
+
+  box-shadow: inset 0 -2px 0 #7b2737;
+}
+
+.input::placeholder {
+  color: #928b80;
+  font-style: italic;
+}
+
+/* ==============================
+   BUTTONS
+============================== */
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+.btn-group button {
+  min-width: 125px;
+
+  padding: 12px 22px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+/* Restart */
+
+.restartBtn {
+  background: #172535;
+  color: #fffdf7;
+
+  border: 1px solid #172535;
+}
+
+.restartBtn:hover {
+  background: #26394d;
+}
+
+/* New Text */
+
+.newTextBtn {
+  background: transparent;
+  color: #7b2737;
+
+  border: 1px solid #7b2737;
+}
+
+.newTextBtn:hover {
+  background: #7b2737;
+  color: #fffdf7;
+}
+
+/* Start */
+
+.start {
+  background: #b08d57;
+  color: #fffdf7;
+
+  border: 1px solid #96743f;
+}
+
+.start:hover {
+  background: #96743f;
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 850px) {
+  .info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .info > * {
+    border-bottom: 1px solid #d8d0c2;
+  }
+
+  .mainHeading {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 550px) {
+  nav {
+    width: 92%;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  nav li {
+    font-size: 11px;
+  }
+
+  main {
+    margin-top: 40px;
+  }
+
+  .mainHeading {
+    font-size: 30px;
+    letter-spacing: 3px;
+  }
+
+  main > h2 {
+    font-size: 14px;
+  }
+
+  .info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main {
+    padding: 25px 20px;
+  }
+
+  .lines {
+    font-size: 17px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn-group button {
+    width: 100%;
+  }
+}
+.lines span.correct {
+  color: #2f7d32;
+}
+
+.lines span.wrong {
+  color: #b3261e;
+}

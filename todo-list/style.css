@@ -1,0 +1,223 @@
+:root {
+  --bg-main: #fdf6f0;
+  --panel: #ffffff;
+  --ink: #2b2620;
+  --ink-dim: #8a7f74;
+  --border-soft: #ece3da;
+  --accent: #d97757;
+  --accent-2: #5b8c7b;
+  --shadow: rgba(43, 38, 32, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg-main);
+  color: var(--ink);
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  border-bottom: 1px solid var(--border-soft);
+  padding: 16px 24px;
+  background: var(--panel);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  max-width: 120px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid var(--border-soft);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 14px;
+}
+
+nav ul li {
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: var(--ink-dim);
+  cursor: pointer;
+  padding: 8px 16px;
+  border: 1px solid var(--border-soft);
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+nav ul li:hover {
+  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+main {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+main h1 {
+  font-size: 1.6rem;
+  letter-spacing: 3px;
+  margin-bottom: 28px;
+  color: var(--ink);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: var(--panel);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px var(--shadow);
+}
+
+.add-task {
+  flex: 1;
+  font-family: inherit;
+  font-size: 0.95rem;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border-soft);
+  background: var(--bg-main);
+  color: var(--ink);
+  outline: none;
+}
+
+.add-task:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(217, 119, 87, 0.15);
+}
+
+.add-task::placeholder {
+  color: var(--ink-dim);
+}
+
+.container button {
+  font-family: inherit;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.add {
+  background: var(--accent);
+  color: #fff;
+}
+
+.add:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 6px 16px rgba(217, 119, 87, 0.3);
+}
+
+.clear {
+  background: transparent;
+  border: 1px solid var(--border-soft);
+  color: var(--ink-dim);
+}
+
+.clear:hover {
+  border-color: #d64545;
+  color: #d64545;
+}
+
+.container button:active {
+  transform: scale(0.95);
+}
+
+.dashboard {
+  width: 100%;
+  height: 400px;
+  overflow-y: scroll;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dashboard:empty::before {
+  content: "NO TASKS YET";
+  display: block;
+  text-align: center;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  color: var(--ink-dim);
+  opacity: 0.7;
+  padding: 30px 0;
+}
+
+.dashboard > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: var(--panel);
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 6px 16px var(--shadow);
+  font-size: 0.95rem;
+}
+
+.dashboard > div.completed {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.dashboard > div button {
+  font-family: inherit;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  padding: 6px 12px;
+  margin-left: 8px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: var(--accent-2);
+  color: #fff;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--ink-dim);
+  opacity: 0.6;
+}
